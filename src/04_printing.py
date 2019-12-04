@@ -12,6 +12,12 @@ z = "I like turtles!"
 # y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
 
+print("x is %i, y is %i, z is %s" % (x, y.__floordiv__, z))
+
 # Use the 'format' string method to print the same thing
 
+print("x is {1}, y is {2}, z is {0}".format(z, x, y.__floordiv__))
+
 # Finally, print the same thing using an f-string
+
+print(f"x is {x}, y is {y}, z is {z}")
