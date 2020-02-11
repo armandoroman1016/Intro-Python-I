@@ -22,3 +22,17 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+userYear = input("Please enter the year: ")
+userMonth = input("Great, now i just need the month: ")
+
+
+cal = calendar.TextCalendar()
+
+if not userYear:
+  userYear =  int(datetime.now().year)
+
+if not userMonth:
+  userMonth = int(datetime.now().month)
+
+print(cal.formatmonth(userYear, userMonth))
