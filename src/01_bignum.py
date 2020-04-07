@@ -3,4 +3,4 @@
 
 # YOUR CODE HERE
 
-print(2 ** 65536)
+print(6 ** 65536)

@@ -8,22 +8,33 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Open up the "foo.txt" file (which already exists) for reading
 # Print all the contents of the file, then close the file
 
-
 # YOUR CODE HERE
-with open('foo.txt', 'r') as f:
-    print(f.read())
-    f.close()
-    print(f.closed)
+
+file = open('foo.txt', 'r')
+
+for line in file:
+    print(line)
+
+file.close()
 
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
 # then close the file. Open up "bar.txt" and inspect it to make 
 # sure that it contains what you expect it to contain
 
+
 # YOUR CODE HERE
-with open('bar.txt', 'w') as n:
-    n.write("Hello, how are you? \nIm good, and yourself? \nGood. Thanks for asking!")
-    n.close()
-with open('bar.txt') as b:
-    print(b.read())
-    b.close()
+
+file_two = open('bar.txt', 'w')
+
+for i in range(1, 4):
+    file_two.write(f"Heres some text on line {i}\n")
+
+file_two.close()
+
+file_two = open('bar.txt', 'r')
+
+for line in file_two:
+    print(line)
+
+
